@@ -569,7 +569,6 @@ abstract contract GToken is GTokenInterface, ExponentialNoError, TokenErrorRepor
             fee = actualRedeemAmount - redeemAmount;	
             	
             doTransferOut(withdrawFeeAddress, fee);	
-            emit Transfer(address(this), withdrawFeeAddress , fee);	
         }
 
         doTransferOut(redeemer, redeemAmount);
